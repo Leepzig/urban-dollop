@@ -52,6 +52,8 @@ function verify(e) {
 
 function changeEverything() {
   if (secretFound === true) {
-    document.querySelector("body").style.backgroundColor = "black"
+    document.querySelector("#question").innerHTML="Ada LoveLace!"
+    document.querySelector("body").style.backgroundColor = "green"
+    document.querySelector("img").src = "https://www.bbvaopenmind.com/wp-content/uploads/2015/12/Ada_Lovelace_Chalon_portrait-1-1024x1024-1.jpg"
   }
 }

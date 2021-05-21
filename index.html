@@ -6,28 +6,28 @@
   </head>
 
   <body>
-    <h1>Hello, World!</h1>
-    <img src="https://image.shutterstock.com/image-photo/anonymous-man-business-shirt-question-260nw-1380713438.jpg" alt="an unknown person, who could he be?">
-    <h2>I'm ready or an adventure</h2>
-    <p>I'm making the change from English teacher to Software Engineer, feel me roar!</p>
+    <h1>Hello, World of Software Engineering!</h1>
+    <h2>Profile</h2>
+    <p>My name is Andrew and I'm ready to embark on this crazy adventure.</p>
     <div>
       <form onsubmit="setMadlib()">
-        Name: <input type="text" id="name" name="name">
-        An adjective: <input type="text" id="adjective" name="adjective">
-        An object in your house:<input type="text" id="item" name="item">
-        A delicious food: <input type="text" id="food" name="food">
-        <input type="button" value="Submit" onclick="setMadlib()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="adjective">An Adjective</label>
+        <input type="text" id="adjective" name="adjective"><br>
+        <label for="item">An object in your house:</label>
+        <input type="text" id="item" name="item"><br>
+        <label for="food">A delicious food: </label>
+        <input type="text" id="food" name="food"><br>
+        <input type="button" value="Submit" onclick="setMadlib()"><br>
       </form>
     </div>
 
     <div id="madlib">
 
     </div>
-
-    <audio controls>
-
-    </audio>
-    
+    <img src="https://image.shutterstock.com/image-photo/anonymous-man-business-shirt-question-260nw-1380713438.jpg" alt="an unknown person, who could he be?">
+    <h2 id="question" >Who was the first programmer?</h2>
     <script src="./index.js"></script>
   </body>
 </html>
