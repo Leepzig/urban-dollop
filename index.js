@@ -1,11 +1,16 @@
 const madlib = {}
 
+
+function setMadlibObject() {
+  let nodeArray = document.querySelectorAll("form input")
+  nodeArray.forEach(element => {
+    madlib[element.id] = element.value
+  });
+}
+
 //get the values from the text boxes for the madlib
 function setMadlib() {
-  madlib.name = document.querySelector("#name").value
-  madlib.adjective = document.querySelector("#adjective").value
-  madlib.item = document.querySelector("#item").value
-  madlib.food = document.querySelector("#food").value
+  setMadlibObject()
 //put madlib values in the paragraph
   if (checkForBlanks() === false) {
     alert("Don't leave any text boxes blank!")
