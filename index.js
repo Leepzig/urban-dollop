@@ -1,19 +1,35 @@
 const madlib = {}
 
-
+//get the values from the text boxes for the madlib
 function setMadlib() {
   madlib.name = document.querySelector("#name").value
   madlib.adjective = document.querySelector("#adjective").value
   madlib.item = document.querySelector("#item").value
   madlib.food = document.querySelector("#food").value
-
-  let madlibText = `Hi my name is ${madlib.name}. I am very ${madlib.adjective}. My most precious possesion is my ${madlib.item}. 
-  My favorite food is ${madlib.food}.`
-
-  const madlibParagraph = document.createElement("p")
-  madlibParagraph.innerHTML = madlibText
-  document.querySelector("#madlib").appendChild(madlibParagraph)
+//put madlib values in the paragraph
+  if (checkForBlanks() === false) {
+    alert("Don't leave any text boxes blank!")
+    return false
+  } else {
+    let madlibText = `Hi my name is ${madlib.name}. I am very ${madlib.adjective}. My most precious possesion is my ${madlib.item}. 
+    My favorite food is ${madlib.food}.`
+  //append madlib to div
+    const madlibParagraph = document.createElement("p")
+    madlibParagraph.innerHTML = madlibText
+    document.querySelector("#madlib").appendChild(madlibParagraph)
+  }
 }
+
+function checkForBlanks() {
+  for (key in madlib) {
+    if (madlib[key].length < 1) {
+      return false
+      break;
+    } 
+  }
+  return true;
+}
+
 
 
 //variables to check for hidden password
@@ -50,6 +66,7 @@ function verify(e) {
   }
 }
 
+//when password is typed change things
 function changeEverything() {
   if (secretFound === true) {
     document.querySelector("#question").innerHTML="Ada LoveLace!"
